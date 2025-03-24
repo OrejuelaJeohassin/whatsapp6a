@@ -10,7 +10,7 @@
 
 <div class="container">
     <h1>Listado de los  Sexos</h1>
-    <a href="/sexo/app/views/sexo/create.php"><button>Agregar Sexo</button></a>
+    <a href="/whatsapp6a/app/views/sexo/create.php"><button>Agregar Sexo</button></a>
 
     <table>
         <thead>
@@ -27,10 +27,10 @@
                         <td><?php echo htmlspecialchars($sexo['id']); ?></td>
                         <td><?php echo htmlspecialchars($sexo['nombre']); ?></td>
                         <td>
-    <a href="/sexo/public/sexo/edit?id=<?php echo htmlspecialchars($sexo['id']); ?>">
+    <a href="/whatsapp6a/public/sexo/edit?id=<?php echo htmlspecialchars($sexo['id']); ?>">
         <button>Editar</button>
     </a>
-    <a href="/sexo/public/sexo/eliminar?id=<?php echo htmlspecialchars($sexo['id']); ?>" 
+    <a href="/whatsapp6a/public/sexo/eliminar?id=<?php echo htmlspecialchars($sexo['id']); ?>" 
        onclick="return confirm('¿Estás seguro de eliminar este registro?');">
         <button>Eliminar</button>
     </a>
@@ -46,6 +46,6 @@
     </table>
 </div>
 
-<script src="/sexo/public/js/script.js"></script>
+<script src="/whatsapp6a/public/js/script.js"></script>
 </body>
 </html>
