@@ -4,7 +4,7 @@ session_start();
 require_once '../app/controllers/SexoController.php';
 
 $requestUri = $_SERVER["REQUEST_URI"];
-$basePath = '/sexo/public/';
+$basePath = '/whatsapp6a/public/';
 
 // Remover el prefijo basePath
 $route = str_replace($basePath, '', $requestUri);
