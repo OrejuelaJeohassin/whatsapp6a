@@ -56,7 +56,7 @@
 </head>
 <body>
     <h1>Editar el Sexo</h1>
-    <form action="/sexo/public/sexo/update" method="POST">
+    <form action="/whatsapp6a/public/sexo/update" method="POST">
         <input type="hidden" name="id" value="<?php echo htmlspecialchars($sexo['id'], ENT_QUOTES, 'UTF-8'); ?>">
         
         <label for="nombre">Nombre:</label>
