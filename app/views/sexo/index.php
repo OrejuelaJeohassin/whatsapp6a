@@ -32,10 +32,10 @@
                         <td><?php echo htmlspecialchars($sexo['idsexo']); ?></td>
                         <td><?php echo htmlspecialchars($sexo['nombre']); ?></td>
                         <td>
-                            <a href="/whatsapp6a/public/sexo/edit?id=<?php echo urlencode($sexo['id']); ?>">
+                            <a href="/whatsapp6a/public/sexo/edit?id=<?php echo urlencode($sexo['idsexo']); ?>">
                                 <button type="button" aria-label="Editar <?php echo htmlspecialchars($sexo['nombre']); ?>">Editar</button>
                             </a>
-                            <a href="/whatsapp6a/public/sexo/eliminar?id=<?php echo urlencode($sexo['id']); ?>" 
+                            <a href="/whatsapp6a/public/sexo/eliminar?id=<?php echo urlencode($sexo['idsexo']); ?>" 
                                onclick="return confirm('¿Estás seguro de eliminar este registro?');">
                                 <button type="button" class="btn-delete" aria-label="Eliminar <?php echo htmlspecialchars($sexo['nombre']); ?>">Eliminar</button>
                             </a>
