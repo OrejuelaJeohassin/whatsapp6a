@@ -29,7 +29,7 @@
             <?php if (!empty($sexos) && is_array($sexos)): ?>
                 <?php foreach ($sexos as $sexo): ?>
                     <tr>
-                        <td><?php echo htmlspecialchars($sexo['id']); ?></td>
+                        <td><?php echo htmlspecialchars($sexo['idsexo']); ?></td>
                         <td><?php echo htmlspecialchars($sexo['nombre']); ?></td>
                         <td>
                             <a href="/whatsapp6a/public/sexo/edit?id=<?php echo urlencode($sexo['id']); ?>">
