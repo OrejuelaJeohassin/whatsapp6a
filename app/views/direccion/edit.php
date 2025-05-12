@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Sexo</title>
+    <title>Editar direccion</title>
 </head>
 <body>
 
 <h1>Editar </h1>
-<form action="/apple5a/public/sexo/update" method="POST">
+<form action="/whatsapp6a/public/sexo/update" method="POST">
     <input type="hidden" name="idsexo" value="<?php echo htmlspecialchars($sexo['idsexo']); ?>">
     
     <label for="nombre">Nombre:</label>
