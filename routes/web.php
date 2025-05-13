@@ -5,7 +5,7 @@ session_start();
 require_once '../app/controllers/SexoController.php';
 require_once '../app/controllers/PersonaController.php';
 require_once '../app/controllers/DireccionController.php';
-require_once '../app/controllers/EstadoCivilController.php';
+require_once '../app/controllers/EstadocivilController.php';
 require_once '../app/controllers/TelefonoController.php';
 
 $requestUri = $_SERVER["REQUEST_URI"];
