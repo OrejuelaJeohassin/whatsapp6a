@@ -10,7 +10,7 @@
 
 <div class="container">
     <h1>Lista de telefonos</h1>
-    <a href="/whatsapp6a/app/views/sexo/create.php"><button>Agregar</button></a>
+    <a href="/whatsapp6a/app/views/telefono/create.php"><button>Agregar</button></a>
 
     <table>
         <thead>
