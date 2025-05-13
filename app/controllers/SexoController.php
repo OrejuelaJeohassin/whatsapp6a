@@ -1,17 +1,12 @@
 
-
 <!DOCTYPE html>
 <?php
-
+// MEJORAS EN VISUAL CODE
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 // En SexoController.php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/whatsapp6a/config/database.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/whatsapp6a/app/models/Sexo.php';
-
-
-
-
 
 
 
@@ -109,12 +104,6 @@ public function update() {
 }
 
 
-
-
-
-
-
-
     // Eliminar un sexo
     public function delete() {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -138,12 +127,35 @@ public function update() {
     die();  // Detener la ejecución para ver los mensajes
 
 }
+
+
+public function api() {
+
+        while (ob_get_level()) {
+            ob_end_clean();
+        }
+
+        $sexos = $this->sexo->getAll();
+        header('Content-Type: application/json');
+        echo json_encode($sexos);
+        exit;
+
+
+
+    }
+
+
+
+
+
+
+
 }
+
 /// Manejo de la acción en la URL
 if (isset($_GET['action'])) {
     $controller = new SexoController();
 
-	   
     switch ($_GET['action']) {
         case 'create':
             $controller->create();
@@ -157,6 +169,11 @@ if (isset($_GET['action'])) {
             $controller->delete();
             break;
 
+         case 'api':
+
+            $controller->api();
+            break;
+
 
 
 
@@ -166,7 +183,7 @@ if (isset($_GET['action'])) {
             break;
     }
 } else {
-    echo "No se especificó ninguna acción.";
+//    echo "No se especificó ninguna acción.";
 }
 
 
