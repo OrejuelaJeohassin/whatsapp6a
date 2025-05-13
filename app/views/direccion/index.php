@@ -10,7 +10,7 @@
 
 <div class="container">
     <h1>Listar  direcciones</h1>
-    <a href="/whatsapp6a/app/views/sexo/create.php"><button>Agregar</button></a>
+    <a href="/whatsapp6a/app/views/direccion/create.php"><button>Agregar</button></a>
 
     <table>
         <thead>
@@ -21,16 +21,16 @@
             </tr>
         </thead>
         <tbody>
-            <?php if (!empty($sexos) && is_array($sexos)): ?>
-                <?php foreach ($sexos as $sexo): ?>
+            <?php if (!empty($direccion) && is_array($direccion)): ?>
+                <?php foreach ($direccion as $direccion): ?>
                     <tr>
-                        <td><?php echo htmlspecialchars($sexo['idsexo']); ?></td>
+                        <td><?php echo htmlspecialchars($sexo['iddireccion']); ?></td>
                         <td><?php echo htmlspecialchars($sexo['nombre']); ?></td>
                         <td>
-    <a href="/whatsapp6a/public/sexo/edit?idsexo=<?php echo htmlspecialchars($sexo['idsexo']); ?>">
+    <a href="/whatsapp6a/public/direccion/edit?iddireccion=<?php echo htmlspecialchars($sexo['iddireccion']); ?>">
         <button>Editar</button>
     </a>
-    <a href="/whatsapp6a/public/sexo/eliminar?idsexo=<?php echo htmlspecialchars($sexo['idsexo']); ?>" 
+    <a href="/whatsapp6a/public/direccion/eliminar?iddireccion=<?php echo htmlspecialchars($sexo['iddireccion']); ?>" 
        onclick="return confirm('¿Estás seguro de eliminar este registro?');">
         <button>Eliminar</button>
     </a>

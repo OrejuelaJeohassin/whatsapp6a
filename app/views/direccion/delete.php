@@ -8,11 +8,11 @@
 <body>
 
 <h1>Elininar Direccion</h1>
-<form action="/apple5a/public/sexo/delete" method="POST">
-    <input type="hidden" name="idsexo" value="<?php echo htmlspecialchars($sexo['idsexo']); ?>">
+<form action="/whatsapp6a/public/sexo/delete" method="POST">
+    <input type="hidden" name="iddireccion" value="<?php echo htmlspecialchars($direccion['iddireccion']); ?>">
     
     <label for="nombre">Nombre:</label>
-    <input type="text" name="nombre" id="nombre" value="<?php echo htmlspecialchars($sexo['nombre']); ?>" required>
+    <input type="text" name="nombre" id="nombre" value="<?php echo htmlspecialchars($direccion['nombre']); ?>" required>
     
     <input type="submit" value="Eliminar">
 </form>
