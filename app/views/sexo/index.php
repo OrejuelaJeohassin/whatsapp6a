@@ -3,26 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listado de Sexos</title>
+    <title>Listar Sexos</title>
     <link rel="stylesheet" href="/whatsapp6a/public/css/style.css">
 </head>
 <body>
 
 <div class="container">
-    <h1>Listado de Sexos</h1>
-
-    <div class="actions">
-        <a href="/whatsapp6a/app/views/sexo/create.php">
-            <button type="button" aria-label="Agregar un nuevo sexo">Agregar Sexo</button>
-        </a>
-    </div>
+    <h1>Listar  Sexos</h1>
+    <a href="/whatsapp6a/app/views/sexo/create.php"><button>Agregar</button></a>
 
     <table>
         <thead>
             <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Acciones</th>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -32,14 +27,14 @@
                         <td><?php echo htmlspecialchars($sexo['idsexo']); ?></td>
                         <td><?php echo htmlspecialchars($sexo['nombre']); ?></td>
                         <td>
-                            <a href="/whatsapp6a/public/sexo/edit?idsexo=<?php echo urlencode($sexo['idsexo']); ?>">
-                                <button type="button" aria-label="Editar <?php echo htmlspecialchars($sexo['idsexo']); ?>">Editar</button>
-                            </a>
-                            <a href="/whatsapp6a/public/sexo/eliminar?idsexo=<?php echo urlencode($sexo['idsexo']); ?>" 
-                               onclick="return confirm('¿Estás seguro de eliminar este registro?');">
-                                <button type="button" class="btn-delete" aria-label="Eliminar <?php echo htmlspecialchars($sexo['idsexo']); ?>">Eliminar</button>
-                            </a>
-                        </td>
+    <a href="/apple6b/public/sexo/edit?idsexo=<?php echo htmlspecialchars($sexo['idsexo']); ?>">
+        <button>Editar</button>
+    </a>
+    <a href="/apple6b/public/sexo/eliminar?idsexo=<?php echo htmlspecialchars($sexo['idsexo']); ?>" 
+       onclick="return confirm('¿Estás seguro de eliminar este registro?');">
+        <button>Eliminar</button>
+    </a>
+</td>
                     </tr>
                 <?php endforeach; ?>
             <?php else: ?>
