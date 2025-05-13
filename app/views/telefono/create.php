@@ -1,5 +1,5 @@
 <form action="../../controllers/TelefonoController.php?action=create" method="POST">
-    <label for="nombre">Nombre:</label>
-    <input type="text" name="nombre" id="nombre" required>
+    <label for="numero">Numero:</label>
+    <input type="text" name="numero" id="numero" required>
     <input type="submit" value="Crear">
 </form>

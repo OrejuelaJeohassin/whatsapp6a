@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Sexo</title>
+    <title>Editar Telefono</title>
 </head>
 <body>
 
-<h1>Editar </h1>
-<form action="/whatsapp6a/public/sexo/update" method="POST">
-    <input type="hidden" name="idsexo" value="<?php echo htmlspecialchars($sexo['idsexo']); ?>">
+<h1>Editar Telefono</h1>
+<form action="/whatsapp6a/public/telefono/update" method="POST">
+    <input type="hidden" name="idtelefono" value="<?php echo htmlspecialchars($telefono['idtelefono']); ?>">
     
-    <label for="nombre">Nombre:</label>
-    <input type="text" name="nombre" id="nombre" value="<?php echo htmlspecialchars($sexo['nombre']); ?>" required>
+    <label for="numero">Numero:</label>
+    <input type="text" name="numero" id="numero" value="<?php echo htmlspecialchars($telefono['nombre']); ?>" required>
     
     <input type="submit" value="Actualizar">
 </form>
