@@ -24,13 +24,13 @@
             <?php if (!empty($direccion) && is_array($direccion)): ?>
                 <?php foreach ($direccion as $direccion): ?>
                     <tr>
-                        <td><?php echo htmlspecialchars($sexo['iddireccion']); ?></td>
-                        <td><?php echo htmlspecialchars($sexo['nombre']); ?></td>
+                        <td><?php echo htmlspecialchars($direccion['iddireccion']); ?></td>
+                        <td><?php echo htmlspecialchars($direccion['nombre']); ?></td>
                         <td>
-    <a href="/whatsapp6a/public/direccion/edit?iddireccion=<?php echo htmlspecialchars($sexo['iddireccion']); ?>">
+    <a href="/whatsapp6a/public/direccion/edit?iddireccion=<?php echo htmlspecialchars($direccion['iddireccion']); ?>">
         <button>Editar</button>
     </a>
-    <a href="/whatsapp6a/public/direccion/eliminar?iddireccion=<?php echo htmlspecialchars($sexo['iddireccion']); ?>" 
+    <a href="/whatsapp6a/public/direccion/eliminar?iddireccion=<?php echo htmlspecialchars($direccion['iddireccion']); ?>" 
        onclick="return confirm('¿Estás seguro de eliminar este registro?');">
         <button>Eliminar</button>
     </a>
