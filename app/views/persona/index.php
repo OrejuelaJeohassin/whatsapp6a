@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listar Personas</title>
+    <title>Lista de Personas</title>
     <link rel="stylesheet" href="/whatsapp6a/public/css/style.css">
 </head>
 <body>
 
 <div class="container">
     <h1>Lista de Personas</h1>
-    <a href="/whatsapp6a/app/views/persona/create.php"><button>Agregar</button></a>
+    <a href="/whatsapp6a/public/persona/create"><button>Agregar</button></a>
 
     <table>
         <thead>
@@ -32,8 +32,7 @@
                         <td><?php echo htmlspecialchars($persona['nombres']); ?></td>
                         <td><?php echo htmlspecialchars($persona['apellidos']); ?></td>
                         <td><?php echo htmlspecialchars($persona['fechanacimiento']); ?></td>
-                        <td><?php echo htmlspecialchars($persona['elsexo']); ?></td> 
-                        <td><?php echo htmlspecialchars($persona['elestadocivil']); ?></td> <td>
+                        <td><?php echo htmlspecialchars($persona['elsexo']); ?></td> <td><?php echo htmlspecialchars($persona['elestadocivil']); ?></td> <td>
                             <a href="/whatsapp6a/public/persona/editForm?id=<?php echo htmlspecialchars($persona['idpersona']); ?>">
                                 <button>Editar</button>
                             </a>
