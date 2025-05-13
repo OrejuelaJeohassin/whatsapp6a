@@ -82,7 +82,7 @@
     <h1>Eliminar Sexo</h1>
     <p style="text-align: center; color: #555;">¿Estás seguro de que deseas eliminar este registro?</p>
     <form action="/whatsapp6a/public/sexo/delete" method="POST">
-        <input type="hidden" name="id" value="<?php echo htmlspecialchars($sexo['id']); ?>">
+        <input type="hidden" name="id" value="<?php echo htmlspecialchars($sexo['idsexo']); ?>">
         
         <label for="nombre">Nombre:</label>
         <input type="text" name="nombre" id="nombre" value="<?php echo htmlspecialchars($sexo['nombre']); ?>" required readonly>
