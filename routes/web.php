@@ -16,7 +16,7 @@ $route = strtok($route, '?'); // Quitar parámetros GET
  
 // Mostrar el menú si no se ha solicitado ninguna acción específica
 if (empty($route) || $route === '/') {
-    echo "<h1>Menú de Tablas</h1>";
+    echo "<h1>Menú de todas las Tablas</h1>";
     echo "<ul>";
     echo "<li><a href='" . $basePath . "persona/index'>Personas</a></li>";
     echo "<li><a href='" . $basePath . "sexo/index'>Sexos</a></li>";
