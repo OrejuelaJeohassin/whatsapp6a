@@ -21,7 +21,7 @@
             </tr>
         </thead>
         <tbody>
-            <?php if (!empty($telefonos) && is_array($sexos)): ?>
+            <?php if (!empty($telefonos) && is_array($telefonos)): ?>
                 <?php foreach ($telefonos as $telefonos): ?>
                     <tr>
                         <td><?php echo htmlspecialchars($telefonos['idtelefono']); ?></td>
