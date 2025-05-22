@@ -50,7 +50,7 @@ class Direccion {
     }
 
     // Leer una sola dirección por ID
-    public function readOne() {
+    public function read1() {
         try {
             $query = "SELECT * FROM " . $this->table_name . " WHERE iddireccion = :iddireccion LIMIT 1";
             $stmt = $this->conn->prepare($query);
