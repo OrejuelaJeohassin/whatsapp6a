@@ -20,7 +20,7 @@ class DireccionController {
 
     // Mostrar todos los teléfonos
     public function index() {
-        $direccion = $this->direccion->read1();
+        $direccions = $this->direccion->read1();
         require_once '../app/views/direccion/index.php';
     }
 
@@ -121,6 +121,18 @@ class DireccionController {
         }
         die();
     }
+
+    public function api() {
+
+        while (ob_get_level()) {
+            ob_end_clean();
+        }
+
+        $direcciones = $this->direccion->getAll();
+        header('Content-Type: application/json');
+        echo json_encode($direcciones);
+        exit;
+    }
 }
 
 // Manejo de la acción en la URL
@@ -141,6 +153,9 @@ if (isset($_GET['action'])) {
             break;
         case 'delete':
             $controller->delete();
+            break;
+        case 'api':
+            $controller->api();
             break;
         default:
             echo "Acción no válida.";
