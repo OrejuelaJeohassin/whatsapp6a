@@ -47,7 +47,7 @@ class Persona {
     // Leer todas las personas
     public function read() {
         try {
-            $query = "SELECT * FROM persona1";    // . $this->table_name;
+            $query = "SELECT * FROM persona";    // . $this->table_name;
             $stmt = $this->conn->prepare($query);
             $stmt->execute();
 
@@ -107,7 +107,7 @@ class Persona {
 
     public function getAll() {
         // Conexión a la base de datos
-        $query = $this->conn->query("SELECT * FROM persona1");
+        $query = $this->conn->query("SELECT * FROM persona");
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
 
