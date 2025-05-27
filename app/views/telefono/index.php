@@ -3,34 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de telefonos</title>
-    <link rel="stylesheet" href="/whatsapp6a/public/css/style.css">
+    <title>Listar Telefonos</title>
+    <link rel="stylesheet" href="/apple6b/public/css/style.css">
 </head>
 <body>
 
 <div class="container">
-    <h1>Lista de telefonos</h1>
-    <a href="/whatsapp6a/app/views/telefono/create.php"><button>Agregar</button></a>
+    <h1>Listar  Telefonos</h1>
+    <a href="/whatsapp6a/public/telefono/create"><button>Agregar</button></a>
 
     <table>
         <thead>
             <tr>
                 <th>ID</th>
+                <th>Persona</th>
                 <th>Nombre</th>
                 <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
             <?php if (!empty($telefonos) && is_array($telefonos)): ?>
-                <?php foreach ($telefonos as $telefonos): ?>
+                <?php foreach ($telefonos as $telefono): ?>
                     <tr>
-                        <td><?php echo htmlspecialchars($telefonos['idtelefono']); ?></td>
-                        <td><?php echo htmlspecialchars($telefonos['numero']); ?></td>
+                        <td><?php echo htmlspecialchars($telefono['idtelefono']); ?></td>
+                        <td><?php echo htmlspecialchars($telefono['lapersona']); ?></td>
+                        <td><?php echo htmlspecialchars($telefono['numero']); ?></td>
                         <td>
-    <a href="/whatsapp6a/public/telefono/edit?idtelefono=<?php echo htmlspecialchars($sexo['idtelefono']); ?>">
+    <a href="/whatsapp6a/public/telefono/edit?idtelefono=<?php echo htmlspecialchars($telefono['idtelefono']); ?>">
         <button>Editar</button>
     </a>
-    <a href="/whatsapp6a/public/telefono/eliminar?idtelefono=<?php echo htmlspecialchars($sexo['idtelefono']); ?>" 
+    <a href="/whatsapp6a/public/telefono/eliminar?idtelefono=<?php echo htmlspecialchars($telefono['idtelefono']); ?>" 
        onclick="return confirm('¿Estás seguro de eliminar este registro?');">
         <button>Eliminar</button>
     </a>

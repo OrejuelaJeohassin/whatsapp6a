@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Agregar Direccion</title>
+    <title>Agregar Teléfono</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -62,7 +62,7 @@
 <body>
 
 <div class="form-container">
-    <h2>Agregar Direccion</h2>
+    <h2>Agregar Teléfono</h2>
     <form action="../../app/controllers/DireccionController.php?action=create" method="POST">                                                                              
         <label for="idpersona">Persona:</label>
         <select name="idpersona" id="idpersona" required>
@@ -74,7 +74,7 @@
             <?php endforeach; ?>
         </select>
 
-        <label for="nombre">Agregar direccion:</label>
+        <label for="nombre">Número de Teléfono:</label>
         <input type="text" name="nombre" id="nombre" required>
 
         <input type="submit" value="Guardar Teléfono">
