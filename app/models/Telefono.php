@@ -38,7 +38,7 @@ class Telefono {
     // Leer todos los teléfonos
     public function read1() {
         try {
-            $query = "SELECT * FROM " . "telefono1";
+            $query = "SELECT * FROM " . "telefono";
             $stmt = $this->conn->prepare($query);
             $stmt->execute();
 
