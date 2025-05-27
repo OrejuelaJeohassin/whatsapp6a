@@ -32,7 +32,7 @@
                         <td><?php echo htmlspecialchars($persona['nombres']); ?></td>
                         <td><?php echo htmlspecialchars($persona['apellidos']); ?></td>
                         <td><?php echo htmlspecialchars($persona['fechanacimiento']); ?></td>
-                        <td><?php echo htmlspecialchars($persona['idsexo.nombre']); ?></td> 
+                        <td><?php echo htmlspecialchars($persona['idsexo']); ?></td> 
                         <td><?php echo htmlspecialchars($persona['idestadocivil']); ?></td> 
                         <td>
                             <a href="/whatsapp6a/public/persona/view?idpersona=<?php echo htmlspecialchars($persona['idpersona']); ?>">
