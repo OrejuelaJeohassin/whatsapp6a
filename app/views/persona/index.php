@@ -10,7 +10,7 @@
 
 <div class="container">
     <h1>Lista de Personas</h1>
-    <a href="/whatsapp6ab/public/persona/create"><button>Agregar</button></a>
+    <a href="/whatsapp6a/public/persona/create"><button>Agregar</button></a>
 
     <table>
         <thead>
