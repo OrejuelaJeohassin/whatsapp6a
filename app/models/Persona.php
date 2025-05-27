@@ -47,7 +47,12 @@ class Persona {
     // Leer todas las personas
     public function read() {
         try {
-            $query = "SELECT * FROM persona";    // . $this->table_name;
+            $query = "SELECT p.idpersona, p.nombres, p.apellidos, p.fechanacimiento, p.idsexo, p.idestadocivil,
+                             s.nombre AS sexo_nombre, 
+                             ec.nombre AS estadocivil_nombre
+                      FROM " . $this->table_name . " p
+                      LEFT JOIN sexo s ON p.idsexo = s.idsexo
+                      LEFT JOIN estadocivil ec ON p.idestadocivil = ec.idestadocivil";    // . $this->table_name;
             $stmt = $this->conn->prepare($query);
             $stmt->execute();
 
@@ -63,6 +68,15 @@ class Persona {
     public function readOne() {
         try {
             $query = "SELECT * FROM " . $this->table_name . " WHERE idpersona = :idpersona LIMIT 1";
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(":idpersona", $this->idpersona, PDO::PARAM_INT);
+            $query = "SELECT p.idpersona, p.nombres, p.apellidos, p.fechanacimiento, p.idsexo, p.idestadocivil,
+                             s.nombre AS sexo_nombre, 
+                             ec.nombre AS estadocivil_nombre
+                      FROM " . $this->table_name . " p
+                      LEFT JOIN sexo s ON p.idsexo = s.idsexo
+                      LEFT JOIN estadocivil ec ON p.idestadocivil = ec.idestadocivil
+                      WHERE p.idpersona = :idpersona LIMIT 1";
             $stmt = $this->conn->prepare($query);
             $stmt->bindParam(":idpersona", $this->idpersona, PDO::PARAM_INT);
             $stmt->execute();
@@ -106,9 +120,21 @@ class Persona {
 
 
     public function getAll() {
-        // Conexión a la base de datos
-        $query = $this->conn->query("SELECT * FROM persona");
-        return $query->fetchAll(PDO::FETCH_ASSOC);
+        try {
+            $query = "SELECT p.idpersona, p.nombres, p.apellidos, p.fechanacimiento, p.idsexo, p.idestadocivil,
+                             s.nombre AS sexo_nombre, 
+                             ec.nombre AS estadocivil_nombre
+                      FROM " . $this->table_name . " p
+                      LEFT JOIN sexo s ON p.idsexo = s.idsexo
+                      LEFT JOIN estadocivil ec ON p.idestadocivil = ec.idestadocivil";
+            $stmt = $this->conn->prepare($query);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            error_log("Error en getAll() para persona: " . $e->getMessage());
+            return [];
+        }
+        
     }
 
     // Eliminar una persona
