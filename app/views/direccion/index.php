@@ -9,7 +9,7 @@
 <body>
 
 <div class="container">
-    <h1>Listar  Direccions</h1>
+    <h1>Listar  Direcciones</h1>
     <a href="/whatsapp6a/public/direccion/create"><button>Agregar</button></a>
 
     <table>

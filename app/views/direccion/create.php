@@ -74,7 +74,7 @@
             <?php endforeach; ?>
         </select>
 
-        <label for="nombre">Número de Teléfono:</label>
+        <label for="nombre">Agregar direccion:</label>
         <input type="text" name="nombre" id="nombre" required>
 
         <input type="submit" value="Guardar Teléfono">
