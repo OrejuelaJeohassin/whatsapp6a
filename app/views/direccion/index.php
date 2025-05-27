@@ -26,7 +26,7 @@
                 <?php foreach ($direccions as $direccion): ?>
                     <tr>
                         <td><?php echo htmlspecialchars($direccion['iddireccion']); ?></td>
-                        <td><?php echo htmlspecialchars($direccion['idpersona']); ?></td>
+                        <td><?php echo htmlspecialchars($direccion['persona_nombres']); ?></td>
                         <td><?php echo htmlspecialchars($direccion['nombre']); ?></td>
                         <td>
     <a href="/whatsapp6a/public/direccion/edit?iddireccion=<?php echo htmlspecialchars($direccion['iddireccion']); ?>">
