@@ -47,15 +47,12 @@ class Persona {
     // Leer todas las personas
     public function read() {
         try {
-            $query = "SELECT p.*, s.nombre as nombre_sexo, ec.nombre as nombre_estado_civil 
-                      FROM persona p
-                      LEFT JOIN sexo s ON p.idsexo = s.idsexo
-                      LEFT JOIN estado_civil ec ON p.idestadocivil = ec.idestadocivil";
-            
+            $query = "SELECT * FROM persona";    // . $this->table_name;
             $stmt = $this->conn->prepare($query);
             $stmt->execute();
 
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
+
         } catch (PDOException $e) {
             error_log("Error en read() para persona: " . $e->getMessage());
             return [];
@@ -65,17 +62,13 @@ class Persona {
     // Leer una sola persona por ID
     public function readOne() {
         try {
-            $query = "SELECT p.*, s.nombre as nombre_sexo, ec.nombre as nombre_estado_civil 
-                      FROM persona p
-                      LEFT JOIN sexo s ON p.idsexo = s.idsexo
-                      LEFT JOIN estado_civil ec ON p.idestadocivil = ec.idestadocivil
-                      WHERE p.idpersona = :idpersona LIMIT 1";
-            
+            $query = "SELECT * FROM " . $this->table_name . " WHERE idpersona = :idpersona LIMIT 1";
             $stmt = $this->conn->prepare($query);
             $stmt->bindParam(":idpersona", $this->idpersona, PDO::PARAM_INT);
             $stmt->execute();
 
             return $stmt->fetch(PDO::FETCH_ASSOC);
+
         } catch (PDOException $e) {
             error_log("Error en readOne() para persona: " . $e->getMessage());
             return null;
