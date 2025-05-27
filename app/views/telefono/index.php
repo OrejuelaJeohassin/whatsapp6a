@@ -26,7 +26,7 @@
                 <?php foreach ($telefonos as $telefono): ?>
                     <tr>
                         <td><?php echo htmlspecialchars($telefono['idtelefono']); ?></td>
-                        <td><?php echo htmlspecialchars($telefono['lapersona']); ?></td>
+                        <td><?php echo htmlspecialchars($telefono['idpersona']); ?></td>
                         <td><?php echo htmlspecialchars($telefono['numero']); ?></td>
                         <td>
     <a href="/whatsapp6a/public/telefono/edit?idtelefono=<?php echo htmlspecialchars($telefono['idtelefono']); ?>">
