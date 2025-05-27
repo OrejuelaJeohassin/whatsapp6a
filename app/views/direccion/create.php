@@ -77,7 +77,7 @@
         <label for="nombre">Direccion:</label>
         <input type="text" name="nombre" id="nombre" required>
 
-        <input type="submit" value="Guardar Teléfono">
+        <input type="submit" value="Guardar Direccion">
     </form>
 </div>
 
